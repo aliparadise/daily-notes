@@ -20,3 +20,17 @@ const notes = [
     timeSpent: 1,
 } 
 ]
+
+const noteAboutToday = {
+    id: 4,
+    subject: "push method",
+    date: 11.17,
+    feeling: "read carefully, and don't forget your commas!",
+    timeSpent: .30,
+}
+
+notes.push(noteAboutToday)
+
+for (const note of notes) {
+    console.log(note.date)
+}
