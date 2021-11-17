@@ -3,21 +3,21 @@ const notes = [
     subject: "Group Project",
     date: 11.12,
     feeling: "take a nap",
-    timeSpent: 5,
+    timeSpent: "five hours",
 },    
 {
     id: 2,
     subject: "GitHub",
     date: 11.15,
     feeling: "confused, then excited",
-    timeSpent: 2, 
+    timeSpent: "two hours", 
 },
 {
     id: 3,
     subject: "JavaScript",
     date: 11.16,
     feeling: "take it slow",
-    timeSpent: 1,
+    timeSpent: "one hour",
 } 
 ]
 
@@ -26,11 +26,17 @@ const noteAboutToday = {
     subject: "push method",
     date: 11.17,
     feeling: "read carefully, and don't forget your commas!",
-    timeSpent: .30,
+    timeSpent: "30 minutes",
 }
 
 notes.push(noteAboutToday)
 
 for (const note of notes) {
-    console.log(note.date)
+    console.log(`Note ${note.id}
+    ${note.date}
+    I learned ${note.subject}
+    I spent ${note.timeSpent} working on it
+    I felt ${note.feeling}
+    -----------
+    `)
 }
