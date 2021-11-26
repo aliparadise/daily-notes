@@ -1,3 +1,5 @@
+//const searchTerm = "confused"
+
 const notes = [
 {   id: 1,
     subject: "Group Project",
@@ -9,7 +11,7 @@ const notes = [
     id: 2,
     subject: "GitHub",
     date: 11.15,
-    feeling: "confused, then excited",
+    feeling: "confused",
     timeSpent: "two hours", 
 },
 {
@@ -31,12 +33,46 @@ const noteAboutToday = {
 
 notes.push(noteAboutToday)
 
-for (const note of notes) {
-    console.log(`Note ${note.id}
-    ${note.date}
-    I learned ${note.subject}
-    I spent ${note.timeSpent} working on it
-    I felt ${note.feeling}
-    -----------
-    `)
+ for (const note of notes) {
+     console.log(`Note ${note.id}
+     ${note.date}
+     I learned ${note.subject}
+     I spent ${note.timeSpent} working on it
+     I felt ${note.feeling}
+     -----------
+     `)
+ }
+
+//for (const note of notes) {
+    //if (note.feeling === searchTerm) {
+        //console.log(note)
+    //}
+//}
+
+const createNote = (noteObject) => {
+    const lastIndex = notes.length - 1
+    const currentLastNote = notes[lastIndex]
+    const maxId = currentLastNote.id
+    const idForNewNote = maxId + 1
+    
+    noteObject.id = idForNewNote
+    notes.push(moreNewerNote)
+ }
+
+
+// Create a new note object
+const moreNewerNote = {
+    subject: "add id property",
+    date: 11.18,
+    feeling: "hopeful",
+    timeSpent: "30 minutes",
 }
+
+// Specify object as argument for function
+//         |
+//         |
+//         V
+
+createNote(moreNewerNote)
+
+console.log(notes)
